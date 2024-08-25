@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<a href="/new"><button>Send message</button></a>
+		<div class="message-board">
+			<% messages.map(message=>{ %>
+			<div class="user <%= message.user %>">
+				<div class="username"><%= message.user %></div>
+				<div class="message"><%= message.text %></div>
+				<div class="date"><%= message.added %></div>
+			</div>
+			<% }) %>
+		</div>
+	</body>
+</html>
